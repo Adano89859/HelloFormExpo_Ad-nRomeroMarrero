@@ -58,6 +58,20 @@ npm start
   - Menor control sobre funcionalidades nativas específicas
   - Dependencia de librerías de terceros para funciones avanzadas
 
+## ✨ Funcionalidades
+
+### Requisitos básicos
+- Captura del nombre del usuario mediante TextInput
+- Validación de campo vacío
+- Mensaje de saludo personalizado
+- Interfaz responsive con estilos mediante StyleSheet
+
+### Puntos extra implementados (+3pts)
+- ✅ **Botón deshabilitado**: El botón permanece inactivo y gris cuando el campo está vacío
+- ✅ **Estilos condicionales**: Borde rojo y fondo rosado en el input cuando hay error
+- ✅ **Contador de caracteres**: Muestra "X / 20" debajo del input con límite máximo
+- ✅ **Iconos**: Icono de mano en el botón usando @expo/vector-icons
+
 **Mi experiencia**: Expo resultó más sencillo para crear interfaces básicas rápidamente gracias a su configuración mínima y hot reload instantáneo. Sin embargo, para funcionalidades muy específicas de Android, el desarrollo nativo ofrece más control.
 
 ## 🛠️ Tecnologías utilizadas
