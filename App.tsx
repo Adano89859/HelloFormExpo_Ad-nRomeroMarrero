@@ -3,20 +3,36 @@ import { SafeAreaView, Text, TextInput, Pressable, StyleSheet, View } from "reac
 import { StatusBar } from "expo-status-bar";
 
 export default function App() {
+  // Estados
+  const [name, setName] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+
+  // Función para manejar el saludo
+  const handleGreet = () => {
+    if (name.trim().length === 0) {
+      setMessage('⚠️ Introduce tu nombre');
+    } else {
+      setMessage(`👋 Hola, ${name}`);
+    }
+  };
+
   return (
+    //Contenido de la pantalla con los métodos asignador
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Saludador Expo</Text>
 
       <TextInput
         style={styles.input}
         placeholder="Escribe tu nombre..."
+        value={name}
+        onChangeText={setName}
       />
 
-      <Pressable style={styles.button}>
+      <Pressable style={styles.button} onPress={handleGreet}>
         <Text style={styles.buttonText}>Saludar</Text>
       </Pressable>
 
-      <Text style={styles.message}>Aquí aparecerá el saludo</Text>
+      <Text style={styles.message}>{message}</Text>
 
       <StatusBar style="light" />
     </SafeAreaView>
